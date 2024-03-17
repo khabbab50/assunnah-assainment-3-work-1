@@ -1,0 +1,298 @@
+/*=====================================================================================================
+font start 
+=====================================================================================================*/
+@font-face {
+  font-family: "Verdana";
+  font-family: "Segoe UI";
+  src: url("./assets/fonts/Verdana.woff2") format("woff2"),
+    url("./assets/fonts/Verdana.woff") format("woff");
+  src: url("./assets/fonts/SegoeUI.woff2") format("woff2"),
+    url("./assets/fonts/SegoeUI.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*=====================================================================================================
+font end
+=====================================================================================================*/
+
+/*=====================================================================================================
+univarsal sector start
+=====================================================================================================*/
+:root {
+  --primary-colo: #fff;
+  --secodary-color: #000;
+  --hoser-color: #ccc;
+  --grayLight-color: #f1f1f1;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Segoe UI";
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+p {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+body {
+  font-family: "Verdana";
+  font-weight: normal;
+  font-size: 15px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-size: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+/*=====================================================================================================
+univarsal sector end
+=====================================================================================================*/
+
+/*=====================================================================================================
+header section start
+=====================================================================================================*/
+#menu {
+  font-family: "verdana" sans-serif;
+  position: fixed;
+  left: 0;
+  top: 0;
+  max-width: 1500px;
+  width: 100%;
+  background: var(--primary-colo);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+  z-index: 1;
+}
+header .container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secodary-color);
+}
+.logo a {
+  font-size: 25px;
+  color: var(--secodary-color);
+  letter-spacing: 4px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+nav ul a {
+  color: var(--secodary-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 10px;
+}
+nav ul a:hover {
+  background: var(--hoser-color);
+}
+/*=====================================================================================================
+header section start
+=====================================================================================================*/
+
+/*=====================================================================================================
+sero section start
+=====================================================================================================*/
+.hero {
+  max-width: 1500px;
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/images/architect.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.hero h1 {
+  font-size: 36px;
+  letter-spacing: 4px;
+  color: var(--primary-colo);
+  margin-top: 50px;
+}
+.hero span {
+  background: rgb(0 0 0 / 80%);
+  margin-right: 15px;
+  font-weight: 900;
+  padding: 8px 16px;
+}
+/*=====================================================================================================
+hero section end
+=====================================================================================================*/
+
+/*=====================================================================================================
+projects section start
+=====================================================================================================*/
+#projects {
+  margin-bottom: 50px;
+}
+.projects-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.projects-items .item {
+  position: relative;
+}
+.projects-items .item p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 16px;
+  background: var(--secodary-color);
+  color: var(--primary-colo);
+  text-transform: capitalize;
+}
+/*=====================================================================================================
+projects section end
+=====================================================================================================*/
+
+/*=====================================================================================================
+about section start
+=====================================================================================================*/
+#about {
+  margin-bottom: 47px;
+}
+#about .about-contant {
+  line-height: 22.5px;
+  text-align: justify;
+  margin-bottom: 80px;
+}
+#about .teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+#about .teams .team h3 {
+  font-size: 24px;
+}
+#about .teams .team .team-ditails .team-designation {
+  color: var(--hoser-color);
+}
+#about .teams .team .btn {
+  width: 100%;
+  padding: 8px 0;
+  background: var(--grayLight-color);
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+#about .teams .team .btn:hover {
+  background: var(--hoser-color);
+  border: 1px solid #000;
+}
+/*=====================================================================================================
+about section end
+=====================================================================================================*/
+
+/*=====================================================================================================
+contact section start
+=====================================================================================================*/
+#contact {
+  margin-bottom: 50px;
+}
+#contact .contact-desciption {
+  margin-bottom: 20px;
+}
+#contact form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid --hoser-color;
+}
+#contact form .btn {
+  text-transform: uppercase;
+  color: var(--primary-colo);
+  background: var(--secodary-color);
+  padding: 10px 16px;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+}
+#contact form .btn:hover {
+  color: var(--secodary-color);
+  background: var(--hoser-color);
+}
+/*=====================================================================================================
+contact section end
+=====================================================================================================*/
+
+/*=====================================================================================================
+footer section start
+=====================================================================================================*/
+footer {
+  padding: 16px 0;
+  background: var(--secodary-color);
+  color: var(--primary-colo);
+}
+footer p {
+  text-align: center;
+  margin-top: 10px;
+}
+/*=====================================================================================================
+footer section end
+=====================================================================================================*/
+
+/*=====================================================================================================
+responsive media quary start
+=====================================================================================================*/
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #menu .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .projects-items .item {
+    margin: 0 auto;
+  }
+  .teams .team img {
+    width: 100%;
+  }
+}
+/*=====================================================================================================
+responsive media quary end
+=====================================================================================================*/
